@@ -1,0 +1,679 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="index.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Lato&family=Poppins:wght@400&family=Roboto+Slab&family=Ubuntu&display=swap" rel="stylesheet">
+    <link
+    href="https://cdn.rawgit.com/michalsnik/aos/2.1.1/dist/aos.css"
+    rel="stylesheet"
+  />
+  <script src="https://cdn.rawgit.com/michalsnik/aos/2.0.1/dist/aos.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+  
+
+  <script async src="https://kit.fontawesome.com/e7ae6f3064.js" crossorigin="anonymous"></script>
+  
+    <!-- CSS only -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+<!-- JavaScript Bundle with Popper -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous"></script>
+<script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
+    <title>Minerva-News</title>
+</head>
+<body class="body">
+    <header class="header">
+        <h1 class="h1 fs-2 fw-bolder text-center m-3 p-2"  ><span id="title"> MINERVA</span> </h1>
+        
+            <nav class="navbar navbar-expand-lg " style=" background: #e0edf3;" >
+                <div class="container-fluid">
+                  <!-- <a class="navbar-brand" href="#">Navbar</a> -->
+                  <button class="navbar-toggler bg-info" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                  </button>
+                  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav me-auto mb-3 p-2 mb-lg-0">
+                      <li class="nav-item ms-1">
+                        <a class="nav-link active text-dark " aria-current="page" id="border" href="index.html"> Home</a>
+                      </li>
+                      <li class="nav-item ms-1 ps-1">
+                        <a class="nav-link text-dark "id="border" href="news.html">News</a>
+                      </li>
+                      <li class="nav-item ms-1 ps-1">
+                        <a class="nav-link text-dark" id="border" href="#timeline">Events</a>
+                      </li>
+                      <li class="nav-item ms-1 ps-1">
+                        <a class="nav-link text-dark" id="border" href="#">Achivements</a>
+                      </li>
+                      <li class="nav-item ms-1 ps-1">
+                        <a class="nav-link text-dark" id="border" href="#">About Us</a>
+                      </li>
+                      <li class="nav-item ms-1 ps-1">
+                        <!-- Button trigger modal -->
+<button type="button" class="btn " id="btn" data-bs-toggle="modal" data-bs-target="#exampleModal">
+  Login
+</button>
+
+<!-- Modal -->
+<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true"  >
+  <div class="modal-dialog" >
+    <div class="modal-content"  style=" background: #e0edf3;">
+      <div class="modal-header">
+        <h1 class="modal-title fs-5" id="exampleModalLabel">Login</h1>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <!-- Pills navs -->
+<ul class="nav nav-pills nav-justified mb-3" id="ex1" role="tablist">
+  <li class="nav-item" role="presentation">
+    <a class="nav-link active text-white" id="tab-login" data-mdb-toggle="pill" href="#pills-login" role="tab"
+      aria-controls="pills-login" aria-selected="true">Login</a>
+  </li>
+  <li class="nav-item" role="presentation">
+    <a class="nav-link" id="tab-register" data-mdb-toggle="pill" href="#pills-register" role="tab"
+      aria-controls="pills-register" aria-selected="false">Register</a>
+  </li>
+</ul>
+<!-- Pills navs -->
+
+<!-- Pills content -->
+<div class="tab-content">
+  <div class="tab-pane fade show active" id="pills-login" role="tabpanel" aria-labelledby="tab-login">
+    <form>
+      <div class="text-center mb-3">
+        <p>Sign in with:</p>
+        <button type="button" class="btn btn-link btn-floating mx-1">
+          <i class="fab fa-facebook-f"></i>
+        </button>
+
+        <button type="button" class="btn btn-link btn-floating mx-1">
+          <i class="fab fa-google"></i>
+        </button>
+
+        <button type="button" class="btn btn-link btn-floating mx-1">
+          <i class="fab fa-twitter"></i>
+        </button>
+
+        <button type="button" class="btn btn-link btn-floating mx-1">
+          <i class="fab fa-github"></i>
+        </button>
+      </div>
+
+      <p class="text-center">or:</p>
+
+      <!-- Email input -->
+      <div class="form-outline mb-4">
+        <input type="email" id="loginName" class="form-control" />
+        <label class="form-label" for="loginName">Email or username</label>
+      </div>
+
+      <!-- Password input -->
+      <div class="form-outline mb-4">
+        <input type="password" id="loginPassword" class="form-control" />
+        <label class="form-label" for="loginPassword">Password</label>
+      </div>
+
+      <!-- 2 column grid layout -->
+      <div class="row mb-4">
+        <div class="col-md-6 d-flex justify-content-center">
+          <!-- Checkbox -->
+          <div class="form-check mb-3 mb-md-0">
+            <input class="form-check-input" type="checkbox" value="" id="loginCheck" checked />
+            <label class="form-check-label" for="loginCheck"> Remember me </label>
+          </div>
+        </div>
+
+        <div class="col-md-6 d-flex justify-content-center">
+          <!-- Simple link -->
+          <a href="#!">Forgot password?</a>
+        </div>
+      </div>
+
+      <!-- Submit button -->
+      <button type="submit" class="btn btn-primary btn-block mb-4">Sign in</button>
+
+      <!-- Register buttons -->
+      <div class="text-center">
+        <p>Not a member? <a href="#!">Register</a></p>
+      </div>
+    </form>
+  </div>
+  <div class="tab-pane fade" id="pills-register" role="tabpanel" aria-labelledby="tab-register">
+    <form>
+      <div class="text-center mb-3">
+        <p>Sign up with:</p>
+        <button type="button" class="btn btn-link btn-floating mx-1">
+          <i class="fab fa-facebook-f"></i>
+        </button>
+
+        <button type="button" class="btn btn-link btn-floating mx-1">
+          <i class="fab fa-google"></i>
+        </button>
+
+        <button type="button" class="btn btn-link btn-floating mx-1">
+          <i class="fab fa-twitter"></i>
+        </button>
+
+        <button type="button" class="btn btn-link btn-floating mx-1">
+          <i class="fab fa-github"></i>
+        </button>
+      </div>
+
+      <p class="text-center">or:</p>
+
+      <!-- Name input -->
+      <div class="form-outline mb-4">
+        <input type="text" id="registerName" class="form-control" />
+        <label class="form-label" for="registerName">Name</label>
+      </div>
+
+      <!-- Username input -->
+      <div class="form-outline mb-4">
+        <input type="text" id="registerUsername" class="form-control" />
+        <label class="form-label" for="registerUsername">Username</label>
+      </div>
+
+      <!-- Email input -->
+      <div class="form-outline mb-4">
+        <input type="email" id="registerEmail" class="form-control" />
+        <label class="form-label" for="registerEmail">Email</label>
+      </div>
+
+      <!-- Password input -->
+      <div class="form-outline mb-4">
+        <input type="password" id="registerPassword" class="form-control" />
+        <label class="form-label" for="registerPassword">Password</label>
+      </div>
+
+      <!-- Repeat Password input -->
+      <div class="form-outline mb-4">
+        <input type="password" id="registerRepeatPassword" class="form-control" />
+        <label class="form-label" for="registerRepeatPassword">Repeat password</label>
+      </div>
+
+      <!-- Checkbox -->
+      <div class="form-check d-flex justify-content-center mb-4">
+        <input class="form-check-input me-2" type="checkbox" value="" id="registerCheck" checked
+          aria-describedby="registerCheckHelpText" />
+        <label class="form-check-label" for="registerCheck">
+          I have read and agree to the terms
+        </label>
+      </div>
+
+      <!-- Submit button -->
+      <button type="submit" class="btn btn-info btn-block mb-3">Sign in</button>
+    </form>
+  </div>
+</div>
+<!-- Pills content -->
+      </div>
+     
+    </div>
+  </div>
+</div>
+                      </li>
+                    </ul>
+                    <form class="d-flex" role="search">
+                      <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                      <button class="btn btn-outline-danger" type="submit">Search</button>
+                    </form>
+                  </div>
+                </div>
+              </nav>
+        
+    </header>
+
+    <section class="highlights" >
+        <div id="carouselExampleDark" class="carousel carousel-dark slide" data-bs-ride="carousel">
+            <div class="carousel-indicators">
+              <button type="button " data-bs-target="#carouselExampleDark" data-bs-slide-to="0" class="active   " aria-current="true" aria-label="Slide 1"></button>
+              <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="1" aria-label="Slide 2"></button>
+              <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="2" aria-label="Slide 3"></button>
+            </div>
+            <div class="carousel-inner">
+              <div class="carousel-item active" data-bs-interval="10000">
+                <img src="assets\firstPic.jpg" width="600" height="460" class="d-block w-100" alt="...">
+                <div class="carousel-caption d-none d-md-block">
+                  <h5  class=" text-white">First slide label</h5>
+                  <p class=" text-white">Panel to look into SC status for Dalit converts challenged in Supreme Court</p>
+                </div>
+              </div>
+              <div class="carousel-item " data-bs-interval="2000">
+                <img src="https://th-i.thgim.com/public/news/national/wzfq7y/article65303733.ece/alternates/LANDSCAPE_1200/IMG_SUPREMECOURT-NKV_2_1_UN9GERHI.jpg" width="600" height="460" class="d-block w-100" alt="...">
+                <div class="carousel-caption d-none d-md-block">
+                  <h5  class=" text-white">First slide label</h5>
+                  <p class=" text-white">Panel to look into SC status for Dalit converts challenged in Supreme Court</p>
+                </div>
+              </div>
+              <div class="carousel-item" data-bs-interval="2000">
+                <img src="assets\secPic.jpg" width="600" height="460" class="d-block w-100" alt="...">
+                <div class="carousel-caption d-none d-md-block">
+                  <h5 class=" text-white">Second slide label</h5>
+                  <p class=" text-white">Virologist Gagandeep Kang says India doing fine, do not expect surge in cases due to Omicron's sub-variants XBB, BF.7.</p>
+                </div>
+              </div>
+             
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleDark" data-bs-slide="prev">
+              <span class="carousel-control-prev-icon bg-info" aria-hidden="true"></span>
+              <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next " type="button" data-bs-target="#carouselExampleDark" data-bs-slide="next">
+              <span class="carousel-control-next-icon bg-info text-primary " aria-hidden="true"></span>
+              <span class="visually-hidden">Next</span>
+            </button>
+          </div>
+    </section>
+
+    <section class="timeline mt-4" id="timeline">
+        <div class="container-fluid"  >
+            <div class="row"  >
+                <div class="col-lg-12">
+                    <div class="card">
+                        <div class="card-body"  style=" background: #e0edf3;">
+                            <h4 class="card-title mb-5 pt-5 pb-5">Our Timeline</h4>
+            
+                            <div class="hori-timeline" dir="ltr">
+                                <ul class="list-inline events">
+                                    <li class="list-inline-item event-list">
+                                        <div class="px-4">
+                                            <div class="event-date bg-soft-primary text-white"  data-aos="fade-right">3 June</div>
+                                            <h5 class="font-size-16">Event One</h5>
+                                            <p class="text-muted">It will be as simple as occidental in fact it will be Occidental Cambridge friend</p>
+                                            <div>
+                                                <button href="#" class="btn btn-info btn-sm">Read more</button>
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li class="list-inline-item event-list">
+                                        <div class="px-4">
+                                            <div class="event-date bg-soft-success text-white"  data-aos="fade-right">5 June</div>
+                                            <h5 class="font-size-16">Event Two</h5>
+                                            <p class="text-muted">Everyone realizes why a new common language one could refuse translators.</p>
+                                            <div>
+                                                <button href="#" class="btn btn-info btn-sm">Read more</button>
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li class="list-inline-item event-list">
+                                        <div class="px-4">
+                                            <div class="event-date bg-soft-danger text-white"  data-aos="fade-right">7 June</div>
+                                            <h5 class="font-size-16">Event Three</h5>
+                                            <p class="text-muted">If several languages coalesce the grammar of the resulting simple and regular</p>
+                                            <div>
+                                                <button href="#" class="btn btn-info btn-sm">Read more</button>
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li class="list-inline-item event-list">
+                                        <div class="px-4">
+                                            <div class="event-date bg-soft-warning text-white"  data-aos="fade-right">8 June</div>
+                                            <h5 class="font-size-16">Event Four</h5>
+                                            <p class="text-muted">Languages only differ in their pronunciation and their most common words.</p>
+                                            <div>
+                                                <button href="#" class="btn btn-info btn-sm">Read more</button>
+                                            </div>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- end card -->
+                </div>
+            </div>
+            </div>
+
+    </section>
+
+    <section class="cards">
+      >
+        <div class="row m-3">
+          <h2 class="h2 mb-4">Recent News</h2>
+            <div class="col-md-4">
+               <div class="card"  id="card"  data-aos="fade-right">
+                  <img class="card-img-top" src="//placeimg.com/280/180/tech" alt="Card image cap">
+                  <div class="card-body" style=" background: #e0edf3;">
+                     <h5 class="card-title border-bottom pb-3">Card title <a href="#" class="float-right d-inline-flex share"><i class="fas fa-share-alt text-primary"></i></a></h5>
+                     <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                     <button href="#" class="btn btn-sm btn-info float-right">Read more <i class="fas fa-angle-double-right"></i></button>
+                  </div>
+               </div>
+            </div>
+            <div class="col-md-4">
+               <div class="card"  id="card"  data-aos="fade-up">
+                  <img class="card-img-top" src="//placeimg.com/280/180/tech" alt="Card image cap">
+                  <div class="card-body">
+                     <h5 class="card-title border-bottom pb-3">Card title <a href="#" class="float-right btn btn-sm btn-info d-inline-flex share"><i class="fas fa-share-alt"></i></a></h5>
+                     <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                     <button href="#" class="btn btn-sm btn-info float-right">Read more <i class="fas fa-angle-double-right"></i></button>
+                  </div>
+               </div>
+            </div>
+            <div class="col-md-4">
+               <div class="card bg-light"  id="card"  data-aos="fade-left">
+                  <img class="card-img-top" src="//placeimg.com/280/180/tech" alt="Card image cap">
+                  <div class="card-body">
+                     <h5 class="card-title border-bottom pb-3">Card title <a href="#" class="float-right btn btn-sm btn-info d-inline-flex share"><i class="fas fa-share-alt"></i></a></h5>
+                     <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                     <button href="#" class="btn btn-sm btn-info float-right">Read more <i class="fas fa-angle-double-right"></i></button>
+                  </div>
+               </div>
+            </div>
+         </div>
+         <div class="row m-3">
+            <div class="col-md-4">
+               <div class="card"  id="card"  data-aos="fade-right">
+                  <img class="card-img-top" src="//placeimg.com/280/180/tech" alt="Card image cap">
+                  <div class="card-body">
+                     <h5 class="card-title border-bottom pb-3">Card title <a href="#" class="float-right d-inline-flex share"><i class="fas fa-share-alt text-primary"></i></a></h5>
+                     <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                     <button href="#" class="btn btn-sm btn-info float-right">Read more <i class="fas fa-angle-double-right"></i></button>
+                  </div>
+               </div>
+            </div>
+            <div class="col-md-4">
+               <div class="card" id="card"  data-aos="fade-up">
+                  <img class="card-img-top" src="//placeimg.com/280/180/tech" alt="Card image cap">
+                  <div class="card-body">
+                     <h5 class="card-title border-bottom pb-3">Card title <a href="#" class="float-right btn btn-sm btn-info d-inline-flex share"><i class="fas fa-share-alt"></i></a></h5>
+                     <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                     <button href="#" class="btn btn-sm btn-info float-right">Read more <i class="fas fa-angle-double-right"></i></button>
+                  </div>
+               </div>
+            </div>
+            <div class="col-md-4" ">
+               <div class="card bg-light" id="card"  data-aos="fade-right">
+                  <img class="card-img-top" src="//placeimg.com/280/180/tech" alt="Card image cap">
+                  <div class="card-body">
+                     <h5 class="card-title border-bottom pb-3">Card title <a href="#" class="float-right btn btn-sm btn-info d-inline-flex share"><i class="fas fa-share-alt"></i></a></h5>
+                     <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                     <button href="#" class="btn btn-sm btn-info float-right">Read more <i class="fas fa-angle-double-right"></i></button>
+                  </div>
+               </div>
+            </div>
+         </div>
+
+         <div class="container text-center mt-5" data-aos="fade-up">
+          <a class="btn btn-primary fw-bold text-light p-2 fs-4 btn-lg " href="news.html" id="btn">Read more <i class="fas fa-angle-double-right"> </i></a>
+        </div>
+
+    </section>
+
+    <section class="featuring-pes" >
+      <div class="container border border-1 rounded mt-5 mb-5"  style=" background: #e0edf3;">
+      <h4 class="h4 text-primary fw-bold mt-5 ps-3 " data-aos="fade-up">Featuring PES</h4>
+      <h2 class="h2 mt-5 ps-3 " data-aos="fade-up">Lorem ipsum dolor sit amet consectetur.</h2>
+      <div class="d-flex" id="feature">
+        <div class="container mt-5 mb-5" id="content" data-aos="fade-up">
+          Lorem ipsum, dolor sit amet consectetur adipisicing elit. Perspiciatis
+          et reprehenderit iure, quasi suscipit saepe ea cum quam voluptates
+          quo, repellendus iste velit quas modi. Nihil itaque nemo consequuntur
+          minima. Lorem ipsum dolor sit amet consectetur adipisicing elit.
+          Voluptatem deleniti rerum asperiores nisi quam laboriosam veniam minus
+          rem odio. Unde blanditiis sit laboriosam fuga consectetur, culpa vitae
+          quas error reiciendis! Lorem ipsum dolor, sit amet consectetur
+          adipisicing elit. Saepe necessitatibus enim quae dolore pariatur
+          libero, dolorum totam ducimus minus animi earum atque, corporis, omnis
+          quia quos ipsam alias eos rerum? Lorem ipsum dolor sit, amet
+          consectetur adipisicing elit.
+        </div>
+        <div class="container" data-aos="zoom-in-up">
+          <lottie-player
+            src="https://assets7.lottiefiles.com/packages/lf20_ffkzpglj.json"
+            background="transparent"
+            speed="1"
+            style="width: 300px; height: 300px"
+            loop
+            id="hide"
+            autoplay
+          ></lottie-player>
+        </div>
+      </div>
+    </div>
+    </section>
+    <section class="about-us">
+      <div class="container border border-1 rounded" style=" background: #e0edf3;">
+        <div class="text-center">
+            <h2 class="h2 m-5">About Us</h2>
+            <p class="p">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolorem, nisi enim debitis repudiandae perspiciatis nam adipisci harum maxime inventore tempora fuga deleniti amet. Enim temporibus corrupti dolores, unde veniam in?</p>
+            <div class="d-flex text-center justify-content-center mt-4 ">
+              <button class="btn btn-primary"> More About Us </button>
+              <button class="btn border-1 border-primary ms-4"> More About Us </button>
+            </div>
+            
+            
+        </div>
+        <div class="text-center mt-5 p-2">
+        <h3 class="h3">What we do?</h3> </div>
+        <div class="d-flex mb-5" id="lotties">
+            <div class="container"  data-aos="zoom-in-up">
+                <lottie-player src="https://assets9.lottiefiles.com/packages/lf20_2LdLki.json"  background="transparent"  speed="1"  style="width: 300px; height: 300px;"  loop  autoplay></lottie-player>
+                <span >Lorem ipsum dolor sit amet consectetur adipisicing elit. Facere nemo deleniti provident voluptatem sint, quasi illum nulla odio earum mollitia at corrupti soluta sequi quisquam quos natus, accusantium ab ut?</span>
+            </div>
+            <div class="container"  data-aos="zoom-in-up">
+                <lottie-player src="https://assets9.lottiefiles.com/packages/lf20_yetxuujw.json"  background="transparent"  speed="1"  style="width: 300px; height: 300px;"  loop  autoplay></lottie-player>
+                <span >Lorem ipsum dolor sit, amet consectetur adipisicing elit. Amet, ratione suscipit repellendus quos ullam sequi quaerat id praesentium, dicta ipsam omnis, possimus neque consequatur sapiente? Dicta, nobis quasi. At, illo!</span>
+            </div>
+            <div class="container class="mb-3"  data-aos="zoom-in-up">
+                <lottie-player src="https://assets9.lottiefiles.com/packages/lf20_rqxo1mki.json"  background="transparent"  speed="1"  style="width: 300px; height: 300px;"  loop  autoplay></lottie-player>
+                <span >Lorem ipsum dolor sit, amet consectetur adipisicing elit. Iste sunt voluptatibus ut odio, unde voluptates facilis excepturi, quos eos, similique reprehenderit quisquam sequi ipsam quis. Provident, voluptatum! Cum, dolore esse.</span>
+            </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="team" data-aos="zoom-in-up">
+        <div class="container mt-5 mb-5   "  >
+          <h1 class="h1 p-2  m-2" data-aos="fade-up"> Our Team</h1>
+        </div>
+        <div class="container d-flex justify-content-around p-2"data-aos="fade-up" id="card-team">
+        <div class="card" style="width: 18rem;">
+          <img class="card-img-top" src="..." alt="Card image cap">
+          <div class="card-body">
+            <h3>Name</h3>
+            <p class="card-text"> Position</p>
+            <p> social media</p>
+            
+          </div>
+        </div>
+        <div class="card" style="width: 18rem;">
+          <img class="card-img-top" src="..." alt="Card image cap">
+          <div class="card-body">
+            <h3>Name</h3>
+            <p class="card-text"> Position</p>
+            <p> social media</p>
+          </div>
+        </div>
+        <div class="card" style="width: 18rem;">
+          <img class="card-img-top" src="..." alt="Card image cap">
+          <div class="card-body">
+            <h3>Name</h3>
+            <p class="card-text"> Position</p>
+            <p> social media</p>
+          </div>
+        </div>
+        
+      </div>
+  
+      
+      <div class="container d-flex justify-content-around p-2"data-aos="fade-up" id="card-team">
+      <div class="card" style="width: 18rem;">
+        <img class="card-img-top" src="..." alt="Card image cap">
+        <div class="card-body">
+          <h3>Name</h3>
+          <p class="card-text"> Position</p>
+          <p> social media</p>
+          
+        </div>
+      </div>
+      <div class="card" style="width: 18rem;">
+        <img class="card-img-top" src="..." alt="Card image cap">
+        <div class="card-body">
+          <h3>Name</h3>
+          <p class="card-text"> Position</p>
+          <p> social media</p>
+        </div>
+      </div>
+      <div class="card" style="width: 18rem;">
+        <img class="card-img-top" src="..." alt="Card image cap">
+        <div class="card-body">
+          <h3>Name</h3>
+          <p class="card-text"> Position</p>
+          <p> social media</p>
+        </div>
+      </div>
+      
+    </div>
+  
+    
+    <div class="container d-flex justify-content-around p-2"data-aos="fade-up" id="card-team">
+    <div class="card" style="width: 18rem;">
+      <img class="card-img-top" src="..." alt="Card image cap">
+      <div class="card-body">
+        <h3>Name</h3>
+        <p class="card-text"> Position</p>
+        <p> social media</p>
+        
+      </div>
+    </div>
+    <div class="card" style="width: 18rem;">
+      <img class="card-img-top" src="..." alt="Card image cap">
+      <div class="card-body">
+        <h3>Name</h3>
+        <p class="card-text"> Position</p>
+        <p> social media</p>
+      </div>
+    </div>
+    <div class="card" style="width: 18rem;">
+      <img class="card-img-top" src="..." alt="Card image cap">
+      <div class="card-body">
+        <h3>Name</h3>
+        <p class="card-text"> Position</p>
+        <p> social media</p>
+      </div>
+    </div>
+    
+  </div>
+  
+  
+  <div class="container d-flex justify-content-around p-2" data-aos="fade-up" id="card-team">
+  <div class="card" style="width: 18rem;">
+    <img class="card-img-top" src="..." alt="Card image cap">
+    <div class="card-body">
+      <h3>Name</h3>
+      <p class="card-text"> Position</p>
+      <p> social media</p>
+      
+    </div>
+  </div>
+  <div class="card" style="width: 18rem;">
+    <img class="card-img-top" src="..." alt="Card image cap">
+    <div class="card-body">
+      <h3>Name</h3>
+      <p class="card-text"> Position</p>
+      <p> social media</p>
+    </div>
+  </div>
+  <div class="card" style="width: 18rem;">
+    <img class="card-img-top" src="..." alt="Card image cap">
+    <div class="card-body">
+      <h3>Name</h3>
+      <p class="card-text"> Position</p>
+      <p> social media</p>
+    </div>
+  </div>
+  
+  </div>
+      </section>
+  
+  
+      <section class="contact-us" id="contact-us" style="background-color: rgb(7 25 47) ;" data-aos="zoom-in-up">
+        <div class="container mt-5" data-aos="fade-up">
+          <h1 class="h1 fw-bold p-5 text-info text-center">Got some coffee/tea?</h1>
+        </div>
+        <div class="container d-flex justify-content-around p-2"data-aos="fade-up" id="contact">
+        <div class="container mt-5 pt-3">
+          <lottie-player src="https://assets1.lottiefiles.com/packages/lf20_in4cufsz.json"  background="transparent"  speed="1"  style="width: 300px; height: 300px;"  loop  autoplay></lottie-player>
+        </div>
+  
+        <!-- form -->
+        
+        <div class="container">
+          <form data-aos="flip-up" action="https://formspree.io/f/moqbloye" id="contact_form" class="m-5" style="box-shadow: rgba(246, 246, 246, 0.35) 0px 5px 15px; margin: 10px; padding: 20px; border-radius: 10px;"
+        method="POST">
+        <div class="mb-3">
+          <label for="exampleFormControlInput1" class="form-label text-info">Name</label>
+          <input type="name" name="name" class="form-control" id="exampleFormControlInput1" required placeholder="">
+        </div>
+        <div class="mb-3">
+          <label for="exampleFormControlInput1" class="form-label text-info">Email address</label>
+          <input type="email" name="email" class="form-control" id="exampleFormControlInput1" required placeholder="name@example.com">
+        </div>
+        <label for="exampleDataList" class="form-label text-info">Subject</label>
+  <input class="form-control" name="subject" list="datalistOptions" id="exampleDataList" required placeholder="">
+  <datalist id="datalistOptions">
+    <option value="Suggestion/Feedback/others">
+    
+  </datalist>
+        <div class="mb-3">
+          <label for="exampleFormControlTextarea1" class="form-label text-info">Message</label>
+          <textarea class="form-control" name="message" id="exampleFormControlTextarea1" rows="3"></textarea>
+        </div> 
+        <div class="mb-3">
+          <input type="submit" class="btn btn-info ">
+        </div>
+    
+      </form>
+      </div>
+    </div> 
+      </section>
+     
+      <footer class=" page-footer font-small cyan darken" style="background-color:  rgb(7 25 47); border-top:2px solid #eceeef;">
+        
+        <div class="container d-flex justify-content-around p-5 ">
+          <div class="container" id="club-name">
+            <img
+              src="..."
+              width="160"
+              height="140"
+              class="img-fluid rounded-circle"
+              alt="..."
+            />
+            <h1 class="h1 fs-1 text-info" id="club-name">MINERVA</h1>
+          </div>
+          <div class="container pt-5" id="icons">
+            <!-- <div class="col-md-4 col-sm-6 col-xs-12"> -->
+             <center> <ul class="social-icons">
+                <li><a class="instagram" href=""><i class="fa fa-instagram"></i></a></li> 
+                <li><a class="twitter" href="#"><i class="fa fa-twitter"></i></a></li>
+                <li><a class="dribbble" href="#"><i class="fa fa-dribbble"></i></a></li>
+                <li><a class="linkedin" href="#"><i class="fa fa-linkedin"></i></a></li>   
+              </ul></center>
+            </div>
+        
+            
+          
+          <div class="container" id="pes-logo">
+            <img
+              src="assets\PES_LogoWhite.webp"
+              width="300"
+              height="300"
+              class="img-fluid  p-4"
+              alt="..."
+            />
+          </div>
+        </div>
+        <div class="container text-center text-info py-3">MINERVA 2022 ● All rights reserved<br>Made with ❣️ by  Web Dev Team
+        </div>
+      </footer>
+
+      <script>
+         AOS.init({
+        duration: 1200,
+      });
+      </script>
+</body>
+</html>
